@@ -25,7 +25,7 @@ New deployments are created whenever an upload, binding change (including [envir
 
 Create a new deployment via the Cloudflare dashboard, [Workers API](/api/), or Wrangler (with [`npx wrangler deploy` command](/workers/wrangler/commands/#deploy) or [`wrangler rollback` command](/workers/wrangler/commands#rollback)) .
 
-Notably, deployments are not triggered by changes to bound resources. For example, if two Workers (Worker A and Worker B) are bound via a [service binding](/workers/configuration/bindings/about-service-bindings/), changing the code of Worker B will not trigger a new deployment on Worker A. Changes to the service binding (such as, deleting the binding or updating the [environment](/workers/wrangler/environments/) it points to) on Worker A will also not trigger a new deployment for Worker B.
+Notably, deployments are not triggered by changes to bound resources. For example, if two Workers (Worker A and Worker B) are bound via a [service binding](/workers/runtime-apis/bindings/service-bindings/), changing the code of Worker B will not trigger a new deployment on Worker A. Changes to the service binding (such as, deleting the binding or updating the [environment](/workers/wrangler/environments/) it points to) on Worker A will also not trigger a new deployment for Worker B.
 
 {{<Aside type="note">}}
 
@@ -47,7 +47,7 @@ To access your deployments:
 
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
 2. Select **Workers & Pages**.
-3. In **Overview**, select your Worker > **Deployments**. 
+3. In **Overview**, select your Worker > **Deployments**.
 
 Deployments includes information about previous deployments, and your Worker’s detail page displays information about the most recently deployed and currently active deployment.
 
@@ -76,13 +76,13 @@ To perform a rollback via Wrangler, use the `wrangler rollback` command. Refer t
 To perform a rollback via the Cloudflare dashboard:
 
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
-2. Go to **Workers & Pages** and in **Overview**, select your Worker > **Deployments**. 
+2. Go to **Workers & Pages** and in **Overview**, select your Worker > **Deployments**.
 3. Find the deployment you would like to rollback to.
 4. Select the three dot icon on the right of the deployment and select **Rollback to this deployment**.
 
 ## Limitations
 
-Rollbacks are only valid to the latest 10 deployments. 
+Rollbacks are only valid to the latest 10 deployments.
 
 Rollbacks will not be allowed if external resources have been deleted or modified between the target deployment and the active deployment. Specifically, rollbacks will not be allowed if:
 
