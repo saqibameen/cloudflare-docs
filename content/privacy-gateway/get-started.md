@@ -114,6 +114,7 @@ Available Fields
 - `sum`: Aggregated totals for various metrics, per dimension.
 
 **Dimensions**
+
 You can group your metrics by various dimensions to get a more segmented view of your data:
 
 - `colo` (string!): The airport code of the Cloudflare data center.
@@ -125,7 +126,9 @@ You can group your metrics by various dimensions to get a more segmented view of
 - `endpoint` (string!): The appId that generated traffic.
 - `gatewayStatusCode` (string!): Status code returned by the gateway.
 - `relayStatusCode` (int64!): Status code returned by the relay.
+
 **Sum Fields**
+
 Sum fields offer a cumulative view of various metrics over your selected time period:
 
 - `bytesToClient` (int64!): Total bytes sent from the gateway to the client.
